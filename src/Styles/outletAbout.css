@@ -1,0 +1,15 @@
+.outletContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.outletContent h4 {
+    font-size: 14pt;
+}
+
+.imgOutlet {
+    width: 100%;
+    margin-top: 2%;
+}

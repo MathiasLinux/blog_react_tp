@@ -1,0 +1,76 @@
+/* Importing the Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.navTop {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #4b1d3f;
+    color: white;
+    font-size: 14pt;
+    font-weight: 500;
+}
+
+.navTop img {
+    max-width: 40px;
+    padding: 2%;
+}
+
+.navTop h1 {
+    justify-self: left;
+    margin: 2%;
+    display: flex;
+}
+
+.navUlTop {
+    display: flex;
+    justify-content: center;
+    gap: 4%
+}
+
+.navUlTop a {
+    text-decoration: none;
+    color: white;
+}
+
+.navUlTop a:hover {
+    text-decoration: underline 2px;
+}
+
+.navUlTop li {
+    list-style-type: none;
+}
+
+@media screen and (max-width: 900px) {
+    .navTop img {
+        width: 40px;
+    }
+
+    .navTop {
+        grid-template-columns: auto 1fr;
+    }
+
+    .navTop h1 {
+        margin-left: 25%;
+    }
+
+    .navUlTop {
+        font-size: 12pt;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 30%;
+        text-align: center;
+        justify-items: center;
+        padding: 4% 1%;
+    }
+}

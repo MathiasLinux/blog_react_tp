@@ -1,14 +1,48 @@
+// Import the different modules and functions used by the file
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+
+// Import the css
+import "./Styles/main.css";
+
+// Import the different pages
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import News from "./Pages/News";
+import Faq from "./Pages/Faq";
+import Contact from "./Pages/Contact";
+import NotFound from "./Pages/NotFound";
+import NewsDetail from "./Pages/NewsDetail";
+
+// Import the different components
+import Nav from "./Componants/Nav";
+import AppsPref from "./Componants/AppsPref";
+import DistrosPref from "./Componants/DistrosPref";
+import ServsPref from "./Componants/ServsPref";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <Router>
+            <Nav/>
+            <Routes>
+                {/* The different path to the different Routes */}
+                <Route exact path="/" element={<Home/>}></Route>
+                <Route path="/about" element={<About/>}>
+                    <Route path="distros-pref" element={<DistrosPref/>}/>
+                    <Route path="apps-pref" element={<AppsPref/>}/>
+                    <Route path="servs-pref" element={<ServsPref/>}/>
+                </Route>
+                <Route path="/news" element={<News/>}></Route>
+                <Route path="/news/:slug" element={<NewsDetail/>}></Route>
+                <Route path="/faq" element={<Faq/>}></Route>
+                <Route path="/contact" element={<Contact/>}></Route>
+                <Route path="*" element={<NotFound/>}></Route>
+            </Routes>
+        </Router>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,0 +1,33 @@
+.outletMenu {
+    margin: 2%;
+}
+
+.menuOutlet {
+    text-decoration: none;
+    color: black;
+    border: 4px solid #4b1d3f;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.outletList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    font-size: 14pt;
+}
+
+.outletOutput {
+    margin-top: 2%
+}
+
+@media screen and (max-width: 900px) {
+    .outletList {
+        grid-template-columns: 1fr;
+    }
+
+    .menuOutlet {
+        margin: 2% 0;
+    }
+}

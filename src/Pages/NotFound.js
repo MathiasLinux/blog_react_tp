@@ -1,0 +1,17 @@
+import React from 'react';
+import notFound from '../Imgs/404.svg'
+import {Link} from "react-router-dom";
+import "../Styles/notFound.css"
+
+const NotFound = () => {
+    return (
+        <main className="mainNotFound">
+            <img src={notFound} alt="Erreur 404"/>
+            <h2>Oups vous vous êtes perdu !</h2>
+            <div>La page que vous cherchez n'est plus disponible</div>
+            <div>Vous pouvez retourner à l'accueil <Link to="/">ici</Link> </div>
+        </main>
+    );
+};
+
+export default NotFound;
