@@ -4,7 +4,7 @@ import "../Styles/question.css";
 function Question({question, answer}) {
 
     const openMenuClick = (e) => {
-        let target = e.target
+        let target = e.currentTarget
         let svgArrow = target.querySelector(".svgDefaultArrow")
         if (target.classList.contains("menuOpenQuestion")) {
             target.classList.remove("menuOpenQuestion");

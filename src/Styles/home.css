@@ -1,3 +1,31 @@
-.mainHome{
-    background-color: #9EC1A3;
+#root {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    max-height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.mainHome {
+    height: 100%
+}
+
+.buttonsHome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2%;
+    margin: 2%
+}
+
+.anHomeButton {
+    background-color: #9ec1a3;
+}
+
+.anHomeButton a {
+    text-decoration: none;
+    color: black;
+    font-size: 32pt;
 }
