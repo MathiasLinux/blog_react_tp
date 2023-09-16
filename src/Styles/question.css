@@ -1,0 +1,40 @@
+.divQuestion {
+    margin: 1%;
+}
+
+.theQuestion {
+    border: solid 4px #4b1d3f;
+    padding: 0 1%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.theAnswer {
+    display: none;
+    background-color: #4b1d3f;
+    color: white;
+    border-radius: 20px;
+    padding: 1% 2%;
+    margin-top: 1%
+}
+
+@media screen and (max-width: 900px) {
+    .divQuestion {
+        margin: 3%;
+    }
+
+    .theQuestion {
+        padding: 0 3%;
+    }
+
+    .theAnswer {
+        padding: 4% 6%;
+        margin-top: 2%
+    }
+}
