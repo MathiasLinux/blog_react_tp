@@ -1,7 +1,7 @@
 #root {
+    height: 100dvh;
     display: grid;
-    grid-template-rows: auto 1fr;
-    max-height: 100%;
+    grid-auto-rows: auto 1fr;
 }
 
 img {
@@ -9,23 +9,48 @@ img {
 }
 
 .mainHome {
-    height: 100%
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainHome h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 24pt;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2%;
+    border-radius: 20px;
 }
 
 .buttonsHome {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2%;
-    margin: 2%
 }
 
 .anHomeButton {
     background-color: #9ec1a3;
+    padding: 2dvw;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .anHomeButton a {
     text-decoration: none;
     color: black;
-    font-size: 32pt;
+    font-size: 24pt;
+}
+
+@media screen and (max-width: 900px) {
+    .buttonsHome {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 10%;
+    }
 }
