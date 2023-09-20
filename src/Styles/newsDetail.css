@@ -1,3 +1,29 @@
 .articleDetail {
     margin: 2%;
 }
+
+.spinnerDivArround {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.articleNewsDetail {
+    margin-bottom: 10%;
+}
+
+.eachComment {
+    background-color: #4b1d3f;
+    margin: 2% 0;
+    padding: 2%;
+    color: white;
+    border-radius: 15px;
+}
+
+.eachComment h4 {
+    background-color: #9ec1a3;
+    padding: 1%;
+    border-radius: 15px;
+    color: black
+}

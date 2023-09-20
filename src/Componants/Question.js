@@ -3,6 +3,11 @@ import "../Styles/question.css";
 
 function Question({question, answer}) {
 
+    /********
+     * A function to open the response for the question in the FAQ
+     * @param e the event var to get the target
+     * @return null
+     */
     const openMenuClick = (e) => {
         let target = e.currentTarget
         let svgArrow = target.querySelector(".svgDefaultArrow")

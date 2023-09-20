@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 // Import the css
 import "./Styles/main.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 // Import the different pages
 import Home from "./Pages/Home";

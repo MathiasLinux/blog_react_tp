@@ -1,4 +1,4 @@
-.headerDiv{
+.headerDiv {
     color: white;
     padding: 5%;
     background-position: center;
@@ -6,9 +6,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2dvh
 }
 
-.headerDiv h2{
+.headerDiv h2 {
     font-size: 24pt;
     background-color: rgba(0, 0, 0, 0.64);
     padding: 3%;
@@ -17,7 +18,7 @@
     text-align: center;
 }
 
-.headerDiv p{
+.headerDiv p {
     font-size: 18pt;
     background-color: rgba(0, 0, 0, 0.64);
     padding: 3%;
@@ -26,8 +27,8 @@
     text-align: center;
 }
 
-@media screen and (max-width: 900px){
-    .headerDiv h2, .headerDiv p{
+@media screen and (max-width: 900px) {
+    .headerDiv h2, .headerDiv p {
         padding: 10%;
         border-radius: 20px;
     }

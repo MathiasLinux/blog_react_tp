@@ -1,25 +1,79 @@
-import React from 'react';
 import {useParams} from "react-router-dom";
 import '../Styles/newsDetail.css';
+import axios from "axios";
+import React, {useEffect, useState} from "react";
+import {Col, Container, Row, Spinner} from "reactstrap";
 
 const NewsDetail = () => {
     const {slug} = useParams();
+    const [post, setPost] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [comments, setComments] = useState([])
+    const [isLoadingComment, setIsLoadingComment] = useState(true);
+
+    useEffect(() => {
+        axios.get('https://jsonplaceholder.typicode.com/posts/' + slug)
+            .then(res => {
+                setPost(res.data);
+                setIsLoading(false);
+
+            })
+    }, [slug])
+
+    useEffect(() => {
+        axios.get('https://jsonplaceholder.typicode.com/comments?postId=' + slug)
+            .then(res => {
+                setComments(res.data);
+                setIsLoadingComment(false);
+
+            })
+    }, [slug])
     return (
         <div className="articleDetail">
-            <h2>Article : {slug}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis culpa deserunt doloremque
-                eaque id impedit libero quae repellendus vero? Cupiditate eos repellat tenetur? Amet distinctio ipsam
-                laborum ratione reiciendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
-                consequatur delectus distinctio dolorem earum eos ex fugiat harum id minus necessitatibus, numquam omnis
-                quia quos rerum suscipit veritatis. Dignissimos, reiciendis.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur debitis dignissimos
-                dolores doloribus, id nobis officiis rerum veritatis voluptatem. Alias dolorem, illum in inventore
-                nostrum officiis sint vero? Ipsam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
-                nulla, quia? Cumque, doloremque eos in maxime qui quos recusandae vero. Consequuntur deserunt doloribus
-                expedita iusto, quam quis repellat sequi temporibus.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum iusto, laudantium quasi quo recusandae
-                reprehenderit veritatis? Accusantium adipisci aliquid atque expedita facilis, pariatur quia quis
-                reprehenderit saepe similique ut, voluptate!</p>
+            <div>
+                {isLoading ? (
+                    <>
+                        <div className="spinnerDivArround">
+                            <Spinner className="spinnerWaiting" color="primary" type="grow">
+                                Loading...
+                            </Spinner>
+                        </div>
+                    </>
+                ) : (
+                    <div className="articleNewsDetail">
+                        <h2>{post.title}</h2>
+                        <p>
+                            {post.body}
+                        </p>
+                    </div>
+                )}
+            </div>
+            <div>
+                <h3>Commentaires :</h3>
+                {isLoading ? (
+                    <>
+                        <div className="spinnerDivArround">
+                            <Spinner className="spinnerWaiting" color="primary" type="grow">
+                                Loading...
+                            </Spinner>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <Container>
+                            <Row xs="auto">
+                                {comments.map(comment => (
+                                    <Col key={comment.id} xs="auto" className="eachComment">
+                                        <h4>{comment.name}</h4>
+                                        <span>De : {comment.email}</span>
+                                        <p>{comment.body}</p>
+                                    </Col>
+                                ))}
+                            </Row>
+                        </Container>
+                    </>
+                )}
+            </div>
         </div>
     );
 };

@@ -1,0 +1,19 @@
+.CardsTextContainer {
+    margin-top: 2%
+}
+
+.CardsTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardsTextContainer a {
+    text-decoration: none;
+    color: black
+}
+
+.ColCard {
+    margin-bottom: 2%;
+}
