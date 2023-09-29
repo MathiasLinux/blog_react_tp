@@ -16,12 +16,14 @@ import Faq from "./Pages/Faq";
 import Contact from "./Pages/Contact";
 import NotFound from "./Pages/NotFound";
 import NewsDetail from "./Pages/NewsDetail";
+import Login from "./Pages/Login"
 
 // Import the different components
 import Nav from "./Componants/Nav";
 import AppsPref from "./Componants/AppsPref";
 import DistrosPref from "./Componants/DistrosPref";
 import ServsPref from "./Componants/ServsPref";
+import Logout from "./Pages/Logout";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -40,6 +42,8 @@ root.render(
                 <Route path="/news/:slug" element={<NewsDetail/>}></Route>
                 <Route path="/faq" element={<Faq/>}></Route>
                 <Route path="/contact" element={<Contact/>}></Route>
+                <Route path="/login" element={<Login/>}></Route>
+                <Route path="/logout" element={<Logout/>}></Route>
                 <Route path="*" element={<NotFound/>}></Route>
             </Routes>
         </Router>

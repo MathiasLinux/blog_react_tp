@@ -27,3 +27,16 @@
     border-radius: 15px;
     color: black
 }
+
+.buttonAddComment {
+    display: flex;
+    justify-content: right;
+}
+
+.addCommentForm {
+    display: none;
+}
+
+.addCommentFormDisplay {
+    display: block;
+}
