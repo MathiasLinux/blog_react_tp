@@ -62,6 +62,7 @@ body {
 
     .navTop {
         grid-template-columns: auto 1fr;
+        padding-bottom: 3%;
     }
 
     .navTop h1 {

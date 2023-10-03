@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import axios from "axios";
+import React from 'react';
 import {Button, Form, FormGroup, Input, Label} from "reactstrap";
 import "../Styles/login.css"
 

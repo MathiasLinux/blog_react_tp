@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import '../Styles/formContainer.css';
 import emailjs from 'emailjs-com';
 import {Button, Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";

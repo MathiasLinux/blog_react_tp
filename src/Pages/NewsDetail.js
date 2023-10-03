@@ -131,7 +131,7 @@ const NewsDetail = () => {
             </div>
             <div>
                 <h3>Commentaires :</h3>
-                {isLoading ? (
+                {isLoadingComment ? (
                     <>
                         <div className="spinnerDivArround">
                             <Spinner className="spinnerWaiting" color="primary" type="grow">
