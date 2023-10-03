@@ -1,5 +1,10 @@
+// Importing react
 import React from 'react';
+
+// Importing the style for this componant
 import "../Styles/outletAbout.css";
+
+// Importing the image the componant use
 import webstorm from '../Imgs/webstorm.png';
 
 const AppsPref = () => {

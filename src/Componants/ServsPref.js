@@ -1,4 +1,7 @@
+// Importing react
 import React from 'react';
+
+// Importing the style for this componant
 import "../Styles/outletAbout.css";
 
 const ServsPref = () => {

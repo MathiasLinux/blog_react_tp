@@ -1,7 +1,12 @@
+// Importation of all the modules used in this page
 import React from 'react';
-import notFound from '../Imgs/404.svg'
 import {Link} from "react-router-dom";
+
+// Importation of the style used by this page
 import "../Styles/notFound.css"
+
+// Importation of the image used in the center of this page
+import notFound from '../Imgs/404.svg'
 
 const NotFound = () => {
     return (

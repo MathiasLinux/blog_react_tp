@@ -1,12 +1,18 @@
+// Importation of all the modules used by this componant
 import React from 'react';
 import {Link} from "react-router-dom";
+
+// Importation of the logo of the website
 import arch from "../Imgs/arch.png";
 
 const Nav = () => {
-    // Verify if the localStorage has a token
-    // If it is the case we display the logout button
-    // Else we display the login button
+    /***
+     Verify if the localStorage has a token
+     If it is the case we display the logout button
+     Else we display the login button
+     */
     let token = localStorage.getItem("token")
+    // Creation of the variable for the login button
     let loginButton
     if (token !== null) {
         loginButton = <li><Link to="/logout">Déconnexion</Link></li>

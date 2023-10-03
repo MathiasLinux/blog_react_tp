@@ -1,7 +1,9 @@
+// Importing the different module the page use
 import React from 'react';
-import '../Styles/home.css'
 import {Link} from "react-router-dom";
 
+// Importing the style for the page
+import '../Styles/home.css'
 
 const Home = () => {
     return (

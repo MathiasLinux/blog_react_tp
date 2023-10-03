@@ -1,13 +1,21 @@
+// Importing the different modules the page use
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import bgNews from "../Imgs/news.jpg";
-import Header from "../Componants/Header";
 import {Spinner} from "reactstrap";
-import "../Styles/news.css"
+
+// Importing the componants used in this page
+import Header from "../Componants/Header";
 import CardNews from "../Componants/CardNews";
 
+// Importing the style
+import "../Styles/news.css"
+
+// Importing the image used in the header
+import bgNews from "../Imgs/news.jpg";
 const News = () => {
+    // Creation of a const to get all the posts
     const [posts, setPosts] = useState([]);
+    // Creation of a boolean to set if the content on the page is loading or not
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -15,7 +23,7 @@ const News = () => {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(res => {
                 setPosts(res.data)
-                // When axios has get all the posts, the isLoading state in set to false to stop the requests and diplay the good screen
+                // When axios has get all the posts, the isLoading state in set to false to stop the requests and display the good screen
                 setIsLoading(false)
             })
 
@@ -27,6 +35,7 @@ const News = () => {
                         description="Ici vous pouvez trouver les dernières actualités lié à Linux et plus précisement à ArchLinux une vraie distribution de tryharder."
                         url={bgNews}/>
             </div>
+            {/* Set a condition for the loading of the posts */}
             {isLoading ? (
                 <>
                     <div className="spinnerDivArround">
